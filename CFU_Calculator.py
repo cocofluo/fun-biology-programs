@@ -67,9 +67,9 @@ def main():
     print "Each dilution's CFU/ml are: ", CFU_dictionary
     CFU_Average = Average_Plates(CFU_dictionary)
     Rounded_CFU_Average = round(CFU_Average, -((len(str(CFU_Average)))-4))
-      #Here, I rounded the average to 2 significant figures, using index 2 less than the length of my string.
     print ''
-    print 'Averaged CFU/ml is: ', Rounded_CFU_Average 
+    print 'Averaged CFU/ml is: ', int(Rounded_CFU_Average) 
+    print("Or {:.2e}".format(Rounded_CFU_Average))
     return  
 
 main()
